@@ -1,8 +1,8 @@
 /*
  * Jakefile
- * App
+ * NewApplication
  *
- * Created by You on May 2, 2013.
+ * Created by You on January 29, 2013.
  * Copyright 2013, Your Company All rights reserved.
  */
 
@@ -15,22 +15,21 @@ var ENV = require("system").env,
     configuration = ENV["CONFIG"] || ENV["CONFIGURATION"] || ENV["c"] || "Debug",
     OS = require("os");
 
-app ("App", function(task)
+app ("NewApplication", function(task)
 {
-    task.setBuildIntermediatesPath(FILE.join("Build", "App.build", configuration));
+    task.setBuildIntermediatesPath(FILE.join("Build", "NewApplication.build", configuration));
     task.setBuildPath(FILE.join("Build", configuration));
 
-    task.setProductName("App");
-    task.setIdentifier("com.yourcompany.App");
+    task.setProductName("NewApplication");
+    task.setIdentifier("com.yourcompany.NewApplication");
     task.setVersion("1.0");
     task.setAuthor("Your Company");
     task.setEmail("feedback @nospam@ yourcompany.com");
-    task.setSummary("App");
+    task.setSummary("NewApplication");
     task.setSources((new FileList("**/*.j")).exclude(FILE.join("Build", "**")));
     task.setResources(new FileList("Resources/**"));
     task.setIndexFilePath("index.html");
     task.setInfoPlistPath("Info.plist");
-    task.setNib2CibFlags("-R Resources/");
 
     if (configuration === "Debug")
         task.setCompilerFlags("-DDEBUG -g");
@@ -38,7 +37,7 @@ app ("App", function(task)
         task.setCompilerFlags("-O");
 });
 
-task ("default", ["App"], function()
+task ("default", ["NewApplication"], function()
 {
     printResults(configuration);
 });
@@ -59,36 +58,36 @@ task ("release", function()
 
 task ("run", ["debug"], function()
 {
-    OS.system(["open", FILE.join("Build", "Debug", "App", "index.html")]);
+    OS.system(["open", FILE.join("Build", "Debug", "NewApplication", "index.html")]);
 });
 
 task ("run-release", ["release"], function()
 {
-    OS.system(["open", FILE.join("Build", "Release", "App", "index.html")]);
+    OS.system(["open", FILE.join("Build", "Release", "NewApplication", "index.html")]);
 });
 
 task ("deploy", ["release"], function()
 {
-    FILE.mkdirs(FILE.join("Build", "Deployment", "App"));
-    OS.system(["press", "-f", FILE.join("Build", "Release", "App"), FILE.join("Build", "Deployment", "App")]);
+    FILE.mkdirs(FILE.join("Build", "Deployment", "NewApplication"));
+    OS.system(["press", "-f", FILE.join("Build", "Release", "NewApplication"), FILE.join("Build", "Deployment", "NewApplication")]);
     printResults("Deployment")
 });
 
 task ("desktop", ["release"], function()
 {
-    FILE.mkdirs(FILE.join("Build", "Desktop", "App"));
-    require("cappuccino/nativehost").buildNativeHost(FILE.join("Build", "Release", "App"), FILE.join("Build", "Desktop", "App", "App.app"));
+    FILE.mkdirs(FILE.join("Build", "Desktop", "NewApplication"));
+    require("cappuccino/nativehost").buildNativeHost(FILE.join("Build", "Release", "NewApplication"), FILE.join("Build", "Desktop", "NewApplication", "NewApplication.app"));
     printResults("Desktop")
 });
 
 task ("run-desktop", ["desktop"], function()
 {
-    OS.system([FILE.join("Build", "Desktop", "App", "App.app", "Contents", "MacOS", "NativeHost"), "-i"]);
+    OS.system([FILE.join("Build", "Desktop", "NewApplication", "NewApplication.app", "Contents", "MacOS", "NativeHost"), "-i"]);
 });
 
 function printResults(configuration)
 {
     print("----------------------------");
-    print(configuration+" app built at path: "+FILE.join("Build", configuration, "App"));
+    print(configuration+" app built at path: "+FILE.join("Build", configuration, "NewApplication"));
     print("----------------------------");
 }

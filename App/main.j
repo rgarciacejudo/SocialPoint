@@ -1,8 +1,8 @@
 /*
  * AppController.j
- * App
+ * NewApplication
  *
- * Created by You on May 2, 2013.
+ * Created by You on January 29, 2013.
  * Copyright 2013, Your Company All rights reserved.
  */
 

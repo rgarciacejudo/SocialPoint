@@ -1,32 +1,25 @@
 /*
  * AppController.j
- * App
+ * NewApplication
  *
- * Created by You on May 2, 2013.
+ * Created by You on January 29, 2013.
  * Copyright 2013, Your Company All rights reserved.
  */
 
 @import <Foundation/CPObject.j>
+@import "View/MainWindow.j"
 
 
 @implementation AppController : CPObject
 {
-    CPWindow    theWindow; //this "outlet" is connected automatically by the Cib
+	CPWindow theWindow;
 }
 
 - (void)applicationDidFinishLaunching:(CPNotification)aNotification
 {
-    // This is called when the application is done loading.
-}
-
-- (void)awakeFromCib
-{
-    // This is called when the cib is done loading.
-    // You can implement this method on any object instantiated from a Cib.
-    // It's a useful hook for setting up current UI values, and other things.
-
-    // In this case, we want the window from Cib to become our full browser window
-    [theWindow setFullPlatformWindow:YES];
-}
+    theWindow = [[MainWindow alloc] init];
+    [theWindow orderFront:self];
+    [CPMenu setMenuBarVisible:YES];
+}.
 
 @end
