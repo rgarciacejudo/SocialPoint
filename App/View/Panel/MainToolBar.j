@@ -1,16 +1,21 @@
-@import <AppKit/CPPanel.j>
 
 
-@implementation MainToolBar : CPPanel
+@import <AppKit/CPView.j>
+
+
+@implementation MainToolBar : CPView
 {
 	
 }
 
 - (id) initWithContent():contentView
 {
-  //self = [[CPPanel alloc] initWithFrame:CGRectMake(0.0,0.0,150.0,CGRectGetWidth([contentView bounds]))];
-    if(self){
 
+	self = [[CPView alloc] initWithFrame:CGRectMake(0.0, 0.0, 100.0, CGRectGetHeight([contentView bounds]) )];
+    if(self){
+    	[self setBackgroundColor:[CPColor yellow]];
+    	// This view will grow in both height an width.
+    	//[self setAutoresizingMask:CPViewWidthSizable | CPViewHeightSizable];
     }
     return self;
 }

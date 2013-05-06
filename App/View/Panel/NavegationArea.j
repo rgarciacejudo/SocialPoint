@@ -10,7 +10,7 @@
 
 - (id) initWithContent():contentView
 {
-	self = [[CPView alloc] initWithFrame:CGRectMake(0.0, 150.0, 200.0, CGRectGetHeight([contentView bounds]) - 350.0)];
+	self = [[CPView alloc] initWithFrame:CGRectMake(0.0, 0.0, 200.0, CGRectGetHeight([contentView bounds]) - 100.0)];
     
     if(self){
 
