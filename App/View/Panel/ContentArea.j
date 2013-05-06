@@ -11,9 +11,9 @@
 - (id) initWithContent():contentView
 {
 
-	self = [[CPView alloc] initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth([contentView bounds]) - 200.0, CGRectGetHeight([contentView bounds]) )];
+	self = [super initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth([contentView bounds]) - 150, CGRectGetHeight([contentView bounds]) )];
     if(self){
-    	[self setBackgroundColor:[CPColor blueColor]];
+    	[self setBackgroundColor:[CPColor darkGrayColor]];
     	// This view will grow in both height an width.
     	[self setAutoresizingMask:CPViewWidthSizable | CPViewHeightSizable];
     }

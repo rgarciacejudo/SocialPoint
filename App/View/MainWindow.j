@@ -15,7 +15,7 @@
 
 - (id) init
 {
-	self = [[CPWindow alloc] initWithContentRect:CGRectMakeZero() styleMask:CPBorderlessBridgeWindowMask];
+	self = [super initWithContentRect:CGRectMakeZero() styleMask:CPBorderlessBridgeWindowMask];
     if(self){
 
         contentView = [self contentView];
@@ -42,7 +42,6 @@
         
 
         [contentView addSubview:mainToolBar];
-        CPLog.info("asjdaksdj");
         [contentView addSubview:contentNavegationSplit];
 
 
