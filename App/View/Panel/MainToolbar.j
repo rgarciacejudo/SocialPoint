@@ -1,5 +1,3 @@
-
-
 @import <AppKit/CPToolbar.j>
 @import "FontView.j"
 
