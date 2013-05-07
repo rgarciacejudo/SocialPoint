@@ -38,7 +38,7 @@ var AddToolbarItemIdentifier = "AddToolbarItem",
 {
    return [CPToolbarSeparatorItemIdentifier,AddToolbarItemIdentifier,CopyToolbarItemIdentifier, RemoveToolbarItemIdentifier,
     CPToolbarSpaceItemIdentifier,CPToolbarSeparatorItemIdentifier,UndoToolbarItemIdentifier,RedoToolbarItemIdentifier,CPToolbarSpaceItemIdentifier,
-    CPToolbarSeparatorItemIdentifier,FontToolbarItemIdentifier,CPToolbarSeparatorItemIdentifier];
+    CPToolbarSeparatorItemIdentifier,FontToolbarItemIdentifier,CPToolbarSeparatorItemIdentifier,AddToolbarItemIdentifier];
 }
 
 - (CPToolbarItem)toolbar:(CPToolbar)aToolbar itemForItemIdentifier:(CPString)anItemIdentifier willBeInsertedIntoToolbar:(BOOL)aFlag
