@@ -28,12 +28,14 @@
         var navegationMetaSplit = [[CPSplitView alloc] 
             initWithFrame:CGRectMake(0.0,0.0,200.0,CGRectGetHeight([contentView bounds]))];
 
-        var navegationArea = [[NavegationArea alloc] initWithContent:contentView];
+        var navegationArea = [[NavegationArea alloc] initWithFrame:CGRectMake(0, 0, 150, CGRectGetHeight([contentView bounds]) - 200.0)];
         var metaDataArea = [[MetaDataArea alloc] init];
-        var contentArea = [[ContentArea alloc] initWithContent:contentView];
+        var contentArea = [[ContentArea alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([contentView bounds]) - 150, CGRectGetHeight([contentView bounds]))];
 
         [navegationMetaSplit setVertical:NO];
         [navegationMetaSplit addSubview:navegationArea];
+        CPLog.info(CGRectGetHeight([navegationArea bounds]));
+        CPLog.info(CGRectGetHeight([navegationMetaSplit bounds]));
         [navegationMetaSplit addSubview:metaDataArea];
 
         [contentNavegationSplit addSubview:navegationMetaSplit];

@@ -37,19 +37,19 @@
 
     	[colorButton setImage:imageCW];
 
-    	[fontStyle setSegmentCount:3];
+    	[fontStyle setSegmentCount: 3];
     	[fontStyle setTrackingMode: CPSegmentSwitchTrackingSelectAny];
-    	[textAlign setSegmentCount:4];
+    	[textAlign setSegmentCount: 4];
 
-    	[fontStyle setImage:imageB forSegment:0];
-    	[fontStyle setImage:imageI forSegment:1];
-    	[fontStyle setImage:imageU forSegment:2];
+    	[fontStyle setImage:imageB forSegment: 0];
+    	[fontStyle setImage:imageI forSegment: 1];
+    	[fontStyle setImage:imageU forSegment: 2];
 
-    	[textAlign setSelected:imageAL forSegment:0];
-    	[textAlign setImage:imageAL forSegment:0];
-    	[textAlign setImage:imageAC forSegment:1];
-    	[textAlign setImage:imageAR forSegment:2];
-    	[textAlign setImage:imageAJ forSegment:3];
+    	[textAlign setSelected:imageAL forSegment: 0];
+    	[textAlign setImage:imageAL forSegment: 0];
+    	[textAlign setImage:imageAC forSegment: 1];
+    	[textAlign setImage:imageAR forSegment: 2];
+    	[textAlign setImage:imageAJ forSegment: 3];
 
     	//TODO estos se quitaran
     	[font setTitle:"Arial"];

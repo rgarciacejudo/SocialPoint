@@ -8,13 +8,13 @@
 	
 }
 
-- (id) initWithContent():contentView
+- (id)initWithFrame(CGRect):aFrame
 {
-	self = [super initWithFrame:CGRectMake(0.0, 0.0, 150.0, CGRectGetHeight([contentView bounds]) - 250.0)];
+	self = [super initWithFrame:aFrame];
     
     if(self){
 
-    	[self setBackgroundColor:[CPColor lightGrayColor]];
+    	[self setBackgroundColor:[CPColor colorWithHexString:"E8EAEE"]];
     	// This view will grow in height, but stay fixed width attached to the left side of the screen.
     	[self setAutoresizingMask:CPViewHeightSizable];
     }
