@@ -6,16 +6,16 @@
 @implementation ToolBarPanel : CPView
 {
 	CPTextField _title;
-	CPView _elementsView;
+	CPToolbar _elementsView;
 }
 
 -(id) initWithFrame(CGRect):aFrame andName(CPString):aName
 {
-	self = [super initWithFrame:aFrame];
+	//self = [super initWithFrame:aFrame];
 
     if(self){
     	
-    	_elementsView = [[CPView alloc] initWithFrame:CGRectMake(0.0,0.0,CGRectGetWidth(aFrame),CGRectGetHeight(aFrame)-30)];
+    	/*_elementsView = [[CPToolbar alloc] initWithFrame:CGRectMake(0.0,0.0,CGRectGetWidth(aFrame),CGRectGetHeight(aFrame)-30)];
     	[_elementsView setBackgroundColor:[CPColor grayColor]];
     	_title = [[CPTextField alloc] initWithFrame:CGRectMake(0.0,CGRectGetHeight(aFrame)-30,CGRectGetWidth(aFrame),30)];
 
@@ -25,7 +25,7 @@
     	[_title setCenter: CGPointMake(CGRectGetWidth(aFrame)/2,CGRectGetHeight(aFrame)-15) ];
 
     	[self addSubview:_elementsView];
-    	[self addSubview:_title];
+    	[self addSubview:_title];*/
     }
 
     return self;

@@ -20,7 +20,7 @@
     theWindow = [[MainWindow alloc] init];
     [theWindow orderFront:self];
     
-    //[CPMenu setMenuBarVisible:YES];
+    [CPMenu setMenuBarVisible:YES];
 
 }.
 
