@@ -30,10 +30,10 @@
 
         var navegationArea = [[NavegationArea alloc] initWithFrame:CGRectMake(0, 0, 150, CGRectGetHeight([contentView bounds]) - 200.0)];
         var metaDataArea = [[MetaDataArea alloc] init];
-        var contentArea = [[ContentArea alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([contentView bounds]) - 150, CGRectGetHeight([contentView bounds])-1000)];
+        var contentArea = [[ContentArea alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([contentView bounds]) - 150, CGRectGetHeight([contentView bounds])-150)];
 
         [navegationMetaSplit setVertical:NO];
-        //[navegationMetaSplit addSubview:navegationArea];
+        [navegationMetaSplit addSubview:navegationArea];
         [navegationMetaSplit addSubview:metaDataArea];
 
         [contentNavegationSplit addSubview:navegationMetaSplit];

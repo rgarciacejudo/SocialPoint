@@ -15,7 +15,7 @@
     
     if(self){
 
-    	[self setBackgroundColor:[CPColor colorWithHexString:"E8EAEE"]];
+    	[self setBackgroundColor:[CPColor colorWithHexString:"a8c1d3"]];
     	// This view will grow in height, but stay fixed width attached to the left side of the screen.
     	_itemContainer =[[CPCollectionView alloc] initWithFrame:aFrame];
 
