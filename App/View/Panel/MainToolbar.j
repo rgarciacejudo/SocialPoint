@@ -30,8 +30,8 @@ var FileToolbarItemIdentifier = "FileToolbarItem",
 // Return an array of toolbar item identifier (the default toolbar items that are present in the toolbar) CPToolbarFlexibleSpaceItemIdentifier
 - (CPArray)toolbarDefaultItemIdentifiers:(CPToolbar)aToolbar
 {
-   return [CPToolbarSpaceItemIdentifier,FileToolbarItemIdentifier,CPToolbarSpaceItemIdentifier,CPToolbarSeparatorItemIdentifier,
-           CPToolbarSpaceItemIdentifier,EditToolbarItemIdentifier,CPToolbarSpaceItemIdentifier,CPToolbarSeparatorItemIdentifier,
+   return [CPToolbarSpaceItemIdentifier,FileToolbarItemIdentifier,CPToolbarSeparatorItemIdentifier,
+           EditToolbarItemIdentifier,CPToolbarSeparatorItemIdentifier,
            FontToolbarItemIdentifier,CPToolbarSeparatorItemIdentifier];
 }
 
@@ -60,6 +60,7 @@ var FileToolbarItemIdentifier = "FileToolbarItem",
             var botonCopy = [[CPButton alloc] initWithFrame:CGRectMake(55,0,50,48)];
             var imgRemove = [[CPImage alloc] initWithContentsOfFile:"Resources/icon/RemoveToolbarItem.png" size:CPSizeMake(32, 32)];
             var botonRemove = [[CPButton alloc] initWithFrame:CGRectMake(110,0,50,48)];
+
             [botonAdd setImagePosition:CPImageAbove];
             [botonAdd setTitle:"Agregar"];
             [botonAdd setBordered:NO];
